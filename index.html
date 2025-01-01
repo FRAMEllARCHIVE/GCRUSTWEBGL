@@ -1,20 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Rust WebGL Game</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Key Game</title>
 </head>
 <body>
-  <canvas id="canvas" width="800" height="600"></canvas>
-  <script type="module">
-    import init, { start_webgl } from "./pkg/my_webgl_game.js";
+    <h1>Arrow Key Game</h1>
+    <canvas id="canvas" width="800" height="600"></canvas>
 
-    async function run() {
-      await init();
-      start_webgl("canvas");
-    }
+    <script type="module">
+        import init from './pkg/arrow_key_game.js';
 
-    run();
-  </script>
+        async function run() {
+            await init();
+        }
+
+        run();
+    </script>
 </body>
 </html>
